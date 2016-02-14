@@ -10,15 +10,12 @@
 	var band = 0;
 	var indList = 0;
 	var datofocus;
-
+	
 	$.fn.abanico = function(d,key){
-
 		return this.each(function(){
 			if(d){
-				
 				$(this).keyup(function(e){
-					var este = $(this);
-						
+					var este = $(this);	
 					var inputDato = este.val();
 					if(inputDato!=''){
 						$('.list-abanico').html('');
@@ -28,7 +25,10 @@
 								$('.results').css({
 									'background-color':'rgb(255, 245, 245)',
 									'position':'absolute',
-									'z-index':'1'
+									'z-index':'1',
+									'-webkit-box-shadow': '-1px 6px 28px 0px rgba(161,161,161,0.61)',
+									'-moz-box-shadow': '-1px 6px 28px 0px rgba(161,161,161,0.61)',
+									'box-shadow': '-1px 6px 28px 0px rgba(161,161,161,0.61)'
 								}).append('<ul class="list-abanico"><ul>');
 								$('.list-abanico').css({
 									'list-style':'none',
@@ -55,6 +55,9 @@
 								este.val($(this).text());
 							}).mouseout(function(){
 								$(this).css({'background-color':''});
+							}).click(function(){
+								este.val($(this).text());
+								$('.list-abanico').html('');
 							});
 							if(e.which==40){
 								if(indList==$('.item-list-abanico').length){
@@ -93,7 +96,6 @@
 					}
 				});
 			}
-			
 		});
 	}
 })(jQuery);
