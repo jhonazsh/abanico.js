@@ -62,12 +62,18 @@
 <a id="uso-básico" class="anchor" href="#uso-b%C3%A1sico" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Uso Básico</h3>
 
 <ul>
-<li>Se debe agregar un elemento <code>&lt;div&gt;</code> con clase <strong>.content-abanico</strong>, y colocar en este, un elemento <code>&lt;input&gt;</code>; al cual opcionalmente puedes agregar la clase de bootstrap <strong>.form control</strong>.</li>
+<li>Se debe agregar un elemento <code>&lt;div&gt;</code> con clase <strong>.content-abanico</strong>, y colocar en este, un elemento <code>&lt;input&gt;</code>; al cual opcionalmente puedes agregar la clase de bootstrap <strong>.form control</strong>. Colocar un id <em>ejemplo-abanico</em>.</li>
 </ul>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>content-abanico<span class="pl-pds">"</span></span>&gt;
-  &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>ejemplo-abanico<span class="pl-pds">"</span></span>&gt;
 &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<ul>
+<li>Invocar al plugin <strong>abanico.js</strong>, seleccionando el elemento <code>&lt;input&gt;</code> a través del id.</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#ejemplo-abanico<span class="pl-pds">'</span></span>).<span class="pl-en">abanico</span>();</pre></div>
       </section>
     </div>
 
