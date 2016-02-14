@@ -38,11 +38,12 @@
 							}
 							ind=ind+1;
 							var longInputDato = inputDato.length; 
-							console.log(e.which);
 							for(var i=0; i<d.length; i++){
-									if(inputDato==d[i][key].substr(0,longInputDato)){
-										$('.list-abanico').append('<li class="item-list-abanico">'+d[i][key]+'</li>');	
-									}
+								inputDatoComp = inputDato.toLowerCase();
+								dataComp = d[i][key].substr(0,longInputDato).toLowerCase();
+								if(inputDatoComp==dataComp){
+									$('.list-abanico').append('<li class="item-list-abanico">'+d[i][key]+'</li>');	
+								}
 							}
 							$('.item-list-abanico').css({
 								'padding':'3px 9px',
