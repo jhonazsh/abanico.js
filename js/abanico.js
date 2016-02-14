@@ -39,8 +39,8 @@
 							ind=ind+1;
 							var longInputDato = inputDato.length; 
 							for(var i=0; i<d.length; i++){
-								inputDatoComp = inputDato.toLowerCase();
-								dataComp = d[i][key].substr(0,longInputDato).toLowerCase();
+								var inputDatoComp = inputDato.toLowerCase();
+								var dataComp = d[i][key].substr(0,longInputDato).toLowerCase();
 								if(inputDatoComp==dataComp){
 									$('.list-abanico').append('<li class="item-list-abanico">'+d[i][key]+'</li>');	
 								}
