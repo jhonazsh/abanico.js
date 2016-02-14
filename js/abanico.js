@@ -10,7 +10,7 @@
 	var band = 0;
 	var indList = 0;
 	var datofocus;
-	
+
 	$.fn.abanico = function(d,key){
 		return this.each(function(){
 			if(d){
@@ -80,7 +80,7 @@
 									$('.item-list-abanico').eq(indList-1).css({
 										'background-color':'#ccc'
 									});
-									datofocus = $('.item-list-abanico').eq(indList).text();
+									datofocus = $('.item-list-abanico').eq(indList-1).text();
 								}
 							}
 							if(e.which==13){
