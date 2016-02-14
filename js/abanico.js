@@ -2,14 +2,14 @@
  * abanico.js 0.1.0
  * autor: Jhon Felipe Medina Zapata
  */
-
 (function($){
 
 	var word = [];
 	var ind = 0;
-	var band = 0;
+	var band=0;
 	var indList = 0;
 	var datofocus;
+	var arrayBoolean = [];
 
 	$.fn.abanico = function(d,key){
 		return this.each(function(){
@@ -41,10 +41,35 @@
 							for(var i=0; i<d.length; i++){
 								var inputDatoComp = inputDato.toLowerCase();
 								var dataComp = d[i][key].substr(0,longInputDato).toLowerCase();
-								if(inputDatoComp==dataComp){
-									$('.list-abanico').append('<li class="item-list-abanico">'+d[i][key]+'</li>');	
+								if(inputDatoComp.localeCompare(dataComp)==0){
+									$('.list-abanico').append('<li class="item-list-abanico">'+d[i][key]+'</li>');
+									arrayBoolean[i]=true;
+								}
+								else{
+									arrayBoolean[i]=false;
+								}
+							} 
+							for(var l=0; l<arrayBoolean.length-1; l++){
+								if(arrayBoolean[l]==true){
+									band=0;
+									break;
+								}
+								else{
+									band=1
 								}
 							}
+							if(band==1){
+								$('.list-abanico').append('<li class="item-list-off">No hay valores encontrados...</li>');
+								$('.item-list-off').css({
+									'padding':'3px 9px',
+									'border-bottom':'1px solid #ccc',
+									'border-left':'1px solid #ccc',
+									'border-right':'1px solid #ccc',
+									'color':'red'
+								})
+								band=0;
+							}
+							arrayBoolean=[];
 							$('.item-list-abanico').css({
 								'padding':'3px 9px',
 								'border-bottom':'1px solid #ccc',
