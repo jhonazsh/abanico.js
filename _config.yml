@@ -2,7 +2,7 @@ title: Abanico.js
 description: Plugin jQuery para Busquedas Autocompletadas.
 google_analytics: UA-73777519-1
 show_downloads: true
-theme: jekyll-theme-minimal
+theme: jekyll-theme-cayman
 
 gems:
   - jekyll-mentions
